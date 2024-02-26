@@ -6,8 +6,18 @@ html {
   color: #2c3e50;
 }
 
+#root {
+min-height: 100vh;
+}
+
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -51,9 +61,16 @@ body {
   color: #42b983;
 }
 
+.main-nav-item-position {
+  display: flex;
+  flex-direction: row;
+}
 .main-nav-item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
   text-decoration: none;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .main-nav-item:hover {
@@ -71,7 +88,7 @@ body {
 }
 
 .hero {
-  background-image: url('../img/bank-tree.jpeg');
+  background-image: url('../../public/img/bank-tree.jpeg');
   background-position: 0 -50px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,8 +177,9 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 1rem;
-  border-color: #00bc77;
+  border: none;
   background-color: #00bc77;
+  text-decoration: underline;
   color: #fff;
 }
 
@@ -175,11 +193,21 @@ body {
 }
 
 .sign-in-icon {
-  font-size: 5rem;
+  font-size: 1.50rem;
+}
+
+.error-message {
+  color: red;
+}
+.nav-icon {
+  margin-right: 5px;
 }
 
 .input-remember {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .input-remember label {
@@ -199,7 +227,11 @@ body {
 
 .input-wrapper input {
   padding: 5px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.icon {
+font-size: 1.35em;
 }
 
 .footer {
@@ -223,10 +255,10 @@ body {
   width: 80%;
   margin: 0 auto;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1.8rem;
   box-sizing: border-box;
   text-align: left;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .account-amount {
@@ -259,6 +291,60 @@ body {
   padding: 10px;
 }
 
+dialog {
+  height: 45%;
+  width: 20%;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.modal-background {
+  padding: 15px;
+  height: 93%;
+}
+
+.modal-input-wrapper {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 1rem;
+  gap: 15px;
+}
+
+.modal-input {
+  padding: 10px;
+  margin-top: 5px;
+  width: 55%;
+}
+
+.modal-button {
+  width: 150px !important;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.425);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-button-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
 .header {
   color: #fff;
   margin-bottom: 2rem;
@@ -289,3 +375,4 @@ body {
     width: 200px;
   }
 }
+

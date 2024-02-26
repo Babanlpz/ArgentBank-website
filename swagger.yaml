@@ -1,3 +1,5 @@
+// swagger.yaml
+// This is the file that contains the swagger documentation for the API
 swagger: '2.0'
 info:
   title: Bank Argent API documentation
